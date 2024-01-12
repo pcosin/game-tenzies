@@ -1,30 +1,34 @@
-# React + TypeScript + Vite
+# Tenzies Game
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple game called Tenzies implemented using Vite, React, and TypeScript. The game involves rolling dice until all dice show the same value. Each die can be held at its current value between rolls. The goal is to achieve "Tenzies" by freezing all dice at the same value.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Randomly generates 10 dice with values between 1 and 6.
+- Allows the player to roll the dice, freezing chosen dice values.
+- Displays a confetti explosion when the player achieves "Tenzies."
+- Tracks and displays the number of steps taken to win the game.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Vite: A fast build tool for modern web development.
+- React: A JavaScript library for building user interfaces.
+- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
+- nanoid: A small, secure, URL-friendly unique ID generator.
+- react-confetti-explosion: A React component for creating confetti explosions.
 
-- Configure the top-level `parserOptions` property like this:
+## How to Run
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone the repository.
+   git clone https://github.com/pcosin/tenzies-game.git
+2. cd tenzies-game
+3. npm install
+4. npm run dev
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Gameplay instructions
+
+-Click each die to freeze it at its current value between rolls.
+-Roll the dice until all dice show the same value to achieve "Tenzies."
+-Click the "Roll" button to roll the dice, or "New Game" after achieving "Tenzies".
+
+Have fun playing Tenzies! If you have any issues or suggestions, feel free to open an issue or contribute to the project.
